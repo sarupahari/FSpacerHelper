@@ -1,0 +1,15 @@
+﻿@model FSPACERFINAL.Models.SpacerSearchModel
+@{
+    ViewData["Title"] = "SearchCards";
+}
+
+<form asp-controller="SpacerCards" asp-action="SearchOutputs" method ="post">
+    <label asp-for="SearchDriveNumber"></label>
+    <input asp-for="SearchDriveNumber" type="text"/><br />
+    <label asp-for="SearchOperatorID"></label>
+    <input asp-for="SearchOperatorID" type="text" /><br />
+    <label asp-for="SearchDate"></label>
+    <input asp-for="SearchDate" type="date" /><br />
+    <input type="submit" value="submit"/><br />
+</form>
+
