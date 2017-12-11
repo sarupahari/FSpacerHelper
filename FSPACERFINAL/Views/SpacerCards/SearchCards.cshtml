@@ -2,14 +2,22 @@
 @{
     ViewData["Title"] = "SearchCards";
 }
+<br />
+<br/>
 
 <form asp-controller="SpacerCards" asp-action="SearchOutputs" method ="post">
-    <label asp-for="SearchDriveNumber"></label>
-    <input asp-for="SearchDriveNumber" type="text"/><br />
-    <label asp-for="SearchOperatorID"></label>
-    <input asp-for="SearchOperatorID" type="text" /><br />
-    <label asp-for="SearchDate"></label>
-    <input asp-for="SearchDate" type="date" /><br />
-    <input type="submit" value="submit"/><br />
+    <div class="form-group">
+        <label asp-for="SearchDriveNumber" Drive Number></label>
+        <input asp-for="SearchDriveNumber" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="SearchOperatorID"> Operator ID</label>
+        <input asp-for="SearchOperatorID" type="text" class="form-control"/>
+    </div>
+        <div class="form-group">
+            <label asp-for="SearchDate"> Date</label>
+            <input asp-for="SearchDate" type="date" class="form-control" />
+        </div>
+            <input type="submit" value="submit" class="btn btn-outline-primary" />
 </form>
 

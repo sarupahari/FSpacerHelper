@@ -21,13 +21,38 @@ namespace FSPACERFINAL.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
-        {
+        //public async Task<IActionResult> Index()
+        //{
+        //    var applicationDbContext = _context.SpacerCards.Include(s => s.Drive).Include(s => s.Operator);
+        //    return View(await applicationDbContext.ToListAsync());
+        //}
+        public async Task<IActionResult> Index(string sortOrder)
+        {           
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            var card = from c in _context.SpacerCards
+                           select c;
+            switch (sortOrder)
+            {             
+                case "Date":
+                    card = card.OrderBy(c => c.Date);
+                    break;
+                case "date_desc":
+                    card = card.OrderByDescending(c => c.Date);
+                    break;
+                default:
+                    card = card.OrderBy(c => c.Date);
+                    break;
+            }
             var applicationDbContext = _context.SpacerCards.Include(s => s.Drive).Include(s => s.Operator);
             return View(await applicationDbContext.ToListAsync());
         }
 
-       public IActionResult SearchActive()
+        public IActionResult FirstPage()
+        {
+            return View();
+        }
+
+        public IActionResult SearchActive()
         {
             return View();
         }

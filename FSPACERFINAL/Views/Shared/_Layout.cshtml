@@ -30,7 +30,9 @@
     </div> <!-- /.masthead-->
 
     <nav id="menu" class="panel" role="navigation">
-        <img src="~/images/Gear.png" width="60">
+       <a href="@Url.Action("FirstPage", "SpacerCards")">
+            <img src="@Url.Content("~/images/Gear.png")" width="100"/>
+        </a>
         <ul>
             <li><a asp-area="" asp-controller="SpacerCards" asp-action="Front">Home</a></li>
             <li><a asp-area="" asp-controller="SpacerCards" asp-action="Front">FSpacer Card</a></li>            

@@ -1,7 +1,7 @@
 ﻿body {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-bottom: 20px;
-    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+    /*background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);*/
 }
 
 /* Wrapping element */
@@ -39,6 +39,12 @@
 
 
 /* ************************************************************************************************************* */
+.form-control {
+    background-color: #ffffcc;
+    border: 1px solid #007934;
+    border-radius: 20px;
+}
+
 
 /* ************************ Custom NAV BAR START **************************************** */
 /*
