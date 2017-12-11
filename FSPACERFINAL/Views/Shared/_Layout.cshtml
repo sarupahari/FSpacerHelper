@@ -18,14 +18,30 @@
     </environment>
 </head>
 <body>
+    <div class="masthead">
+        <div class="wrap push">
 
+            <a href="#menu" class="menu-link">&#9776;</a>
 
+            <h1>FSpacer Length Calculator</h1>
+            <p class="subtitle">Gear Company</p>
 
-   
-  
+        </div> <!-- /.wrap -->
+    </div> <!-- /.masthead-->
+
+    <nav id="menu" class="panel" role="navigation">
+        <img src="~/images/Gear.png" width="60">
+        <ul>
+            <li><a asp-area="" asp-controller="SpacerCards" asp-action="Front">Home</a></li>
+            <li><a asp-area="" asp-controller="SpacerCards" asp-action="Front">FSpacer Card</a></li>            
+            <li><a asp-area="" asp-controller="SpacerCards" asp-action="SearchActive"> Search Active Cards</a></li>           
+            <li><a asp-area="" asp-controller="SpacerCards" asp-action="SearchCards">Search</a></li>
+            <li><a asp-area="" asp-controller="SpacerCards" asp-action="Index">Database</a></li>
+        </ul>
+    </nav>
 
     
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    @*<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,7 +62,7 @@
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
-    </nav>
+    </nav>*@
 
     <div class="container body-content">
         @RenderBody()
