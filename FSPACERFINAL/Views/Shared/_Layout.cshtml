@@ -33,12 +33,13 @@
        <a href="@Url.Action("FirstPage", "SpacerCards")">
             <img src="@Url.Content("~/images/Gear.png")" width="100"/>
         </a>
-        <ul>
-            <li><a asp-area="" asp-controller="SpacerCards" asp-action="Front">Home</a></li>
+        <ul>         
             <li><a asp-area="" asp-controller="SpacerCards" asp-action="Front">FSpacer Card</a></li>            
             <li><a asp-area="" asp-controller="SpacerCards" asp-action="SearchActive"> Search Active Cards</a></li>           
             <li><a asp-area="" asp-controller="SpacerCards" asp-action="SearchCards">Search</a></li>
-            <li><a asp-area="" asp-controller="SpacerCards" asp-action="Index">Database</a></li>
+            <li><a asp-area="" asp-controller="SpacerCards" asp-action="Index">Card Database</a></li>
+            <li><a asp-area="" asp-controller="Operators" asp-action="Index">Operator Database</a></li>
+            <li><a asp-area="" asp-controller="DriveCards" asp-action="Index">Drive Card Database</a></li>
         </ul>
     </nav>
 
