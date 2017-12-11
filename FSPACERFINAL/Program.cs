@@ -16,6 +16,7 @@ namespace FSPACERFINAL
     {
         public static void Main(string[] args)
         {
+            //test
             //BuildWebHost(args).Run();
 
             var host = BuildWebHost(args);

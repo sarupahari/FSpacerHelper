@@ -155,6 +155,19 @@
                 @Html.DisplayFor(modelItem => item.Operator.ID)
             </td>
             <td>
+                <div class="span1">
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">
+                        <i class="icon-edit icon-white"></i>
+                        <span><strong>Edit</strong></span>
+                    </a>
+                </div>
+                <div class="span1">
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-primary">
+                        <i class="icon-trash icon-white"></i>
+                        <span><strong>Delete</strong></span>
+                    </a>
+                </div>
+
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
